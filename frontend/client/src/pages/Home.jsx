@@ -1,4 +1,3 @@
-import { useWeb3Context } from "../contexts/useWeb3Context";
 import UploadImage from "../components/uploadImage";
 import GetImage from "../components/GetImage";
 import { useState } from "react";

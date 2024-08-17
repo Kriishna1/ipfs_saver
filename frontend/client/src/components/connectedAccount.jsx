@@ -1,7 +1,8 @@
-import { useWeb3Context } from "../contexts/useWeb3Context";
+import { useWebContext } from "../contexts/useWebContext";
+
 const ConnectedAccount = () => {
-    const {web3State}=useWeb3Context()
-    const {selectedAccount}=web3State;
+    const {webState}=useWebContext()
+    const {selectedAccount}=webState;
     return ( 
       <div className="w-full flex flex-col justify-center items-center md:flex-row md:justify-between md:px-10">
         <p className="font-semibold">Connected Account : {selectedAccount} ,</p>

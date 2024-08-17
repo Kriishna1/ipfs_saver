@@ -1,11 +1,11 @@
-import {useWeb3Context} from "../contexts/useWeb3Context"
 import { connectWallet } from "../utils/connectWallet";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { useWebContext } from "../contexts/useWebContext";
 const Wallet = () => {
     const navigateTo=useNavigate()
-    const {updateWeb3State,web3State} = useWeb3Context()
-    const {selectedAccount}= web3State;
+    const {updateWebState,webState} = useWebContext()
+    const {selectedAccount}= webState;
     useEffect(()=>{
       if(selectedAccount){
         navigateTo("/home")
@@ -14,7 +14,7 @@ const Wallet = () => {
     
     const handleWalletConnection = async()=>{
         const {contractInstance,selectedAccount} = await connectWallet();
-        updateWeb3State({contractInstance,selectedAccount})
+        updateWebState({contractInstance,selectedAccount})
     }
     
     return ( 

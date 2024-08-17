@@ -1,22 +1,23 @@
 import { useState } from "react";
-import { Web3Context } from "./createWeb3Context";
+import { WebContext } from "./createWebContext";
 
-const Web3Giver = ({children}) => {
-    const [web3State,setWeb3State]=useState({
-        contractInstance:null,
-        selectedAccount:null,
-    })
+const Web3Giver = ({ children }) => {
+  const [webState, setWebState] = useState({
+    contractInstance: null,
+    selectedAccount: null,
+  });
 
-    const updateWeb3State = (newState)=>{
-        setWeb3State(prevState=>({
-            ...prevState,
-            ...newState
-        }))
-    }
-    return (
-    <Web3Context.Provider value={{web3State,updateWeb3State}}>
-         {children}
-    </Web3Context.Provider>);
-}
- 
+  const updateWebState = (newState) => {
+    setWebState((prevState) => ({
+      ...prevState,
+      ...newState,
+    }));
+  };
+  return (
+    <WebContext.Provider value={{ webState, updateWebState }}>
+      {children}
+    </WebContext.Provider>
+  );
+};
+
 export default Web3Giver;

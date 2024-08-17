@@ -1,15 +1,15 @@
 import axios from "axios";
-import { useWeb3Context } from "../contexts/useWeb3Context";
 import { useEffect, useState } from "react";
 import {toast} from "react-hot-toast"
 import { CircleArrowLeft,CircleArrowRight } from "lucide-react";
+import { useWebContext } from "../contexts/useWebContext";
 const GetImage = ({reload}) => {
     const [currentPage,setCurrentPage]=useState(1)
     const [imagePerPage,setImagePerPage]=useState(2);
     const [images,setImages]=useState([])
     const [loading,setLoading]=useState(false)
-    const {web3State}=useWeb3Context()
-    const {selectedAccount,contractInstance}=web3State;
+    const {webState}=useWebContext()
+    const {selectedAccount,contractInstance}=webState;
     
     useEffect(()=>{
         try {

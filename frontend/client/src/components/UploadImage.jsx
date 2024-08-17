@@ -1,13 +1,13 @@
 import axios from "axios";
 import { useState } from "react";
-import { useWeb3Context } from "../contexts/useWeb3Context";
 import toast from "react-hot-toast";
 import { ImageUp } from "lucide-react";
+import { useWebContext } from "../contexts/useWebContext";
 
 const UploadImage = ({ reloadEffect }) => {
   const [file, setFile] = useState(null);
-  const { web3State } = useWeb3Context();
-  const { selectedAccount, contractInstance } = web3State;
+  const { webState } = useWebContext();
+  const { selectedAccount, contractInstance } = webState;
   const [loading, setLoading] = useState(false);
 
   const uploadImageHash = async (ipfsHash) => {
