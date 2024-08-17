@@ -1,17 +1,20 @@
-import React from 'react'
-
-import { useWeb3Context } from '../contexts/useWeb3context'
-
-const Home =()=> {
-
-  const {web3State}=useWeb3Context()
-  const {selectedAccount}=web3State;
-  console.log(selectedAccount)
-  return (
-    <div>
-      Home
+import { useWeb3Context } from "../contexts/useWeb3Context";
+import UploadImage from "../components/uploadImage";
+import GetImage from "../components/GetImage";
+import { useState } from "react";
+const Home = () => {
+    const [reload,setReload]=useState(false)
+    // const {web3State}=useWeb3Context()
+    // const {selectedAccount}=web3State;
+    const reloadEffect=()=>{
+      setReload(!reload)
+    }
+return (
+    <div className="relative h-full w-screen flex flex-col justify-center items-center mt-8 px-4 bg-slate-600 ">
+      <UploadImage reloadEffect={reloadEffect}/>
+      <GetImage reload={reload} />
     </div>
-  )
+    );
 }
-
+ 
 export default Home;

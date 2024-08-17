@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Web3Context } from "./createWeb3context";
+import { Web3Context } from "./createWeb3Context";
 
 const Web3Provider = ({children}) => {
     const [web3State,setWeb3State]=useState({

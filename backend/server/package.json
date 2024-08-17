@@ -11,10 +11,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@pinata/sdk": "^2.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "ethers": "^5.7.1",
     "express": "^4.19.2",
-    "mongoose": "^8.5.3"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.3",
+    "multer": "^1.4.5-lts.1",
+    "pinata": "^0.2.0"
   }
 }

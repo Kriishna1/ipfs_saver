@@ -1,8 +1,8 @@
-const mongoose=require('mongoose')
+const mongoose = require('mongoose')
 
-const UserSchema=new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
     userAddress:{
-        type: String ,
+        type:String,
         required:true
     },
     encryptionKey:{
@@ -15,5 +15,5 @@ const UserSchema=new mongoose.Schema({
     }
 })
 
-const UserModel=mongoose.model('users',UserSchema)
-module.exports= UserModel
+const UserModel = mongoose.model("users",UserSchema);
+module.exports=UserModel
