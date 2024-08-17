@@ -22,6 +22,7 @@ async function serverStart() {
       console.log("server is running");
     });
   } catch (error) {
+    console.log(MONGO_URL);
     console.log('error, because didnt connect database');
     
   }
