@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import { ImageUp } from "lucide-react";
 import { useWebContext } from "../contexts/useWebContext";
 
-const UploadImage = ({ reloadEffect }) => {
+const UploadImages = ({ reloadEffect }) => {
   const [file, setFile] = useState(null);
   const { webState } = useWebContext();
   const { selectedAccount, contractInstance } = webState;
@@ -82,4 +82,4 @@ const UploadImage = ({ reloadEffect }) => {
   );
 };
 
-export default UploadImage;
+export default UploadImages;
