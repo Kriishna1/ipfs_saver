@@ -26,7 +26,8 @@ const UploadImage = ({ reloadEffect }) => {
       setLoading(true);
       const formData = new FormData();
       formData.append("file", file);
-      const url = `http://localhost:3000/api/uploadImage`;
+      const url = `https://project-k-server.onrender.com/api/uploadImage`;
+      console.log(url);
       const token = localStorage.getItem("token");
 
       const config = {

@@ -27,13 +27,13 @@ export const connectWallet =async()=>{
          signature
         }
       
-        const url=`http://localhost:3000/api/authentication?address=${selectedAccount}`
+        const url=`https://project-k-server.onrender.com/api/authentication?address=${selectedAccount}`
         const res = await axios.post(url,dataSignature)
         const token = res.data.token
         
         localStorage.setItem("token",token)
    
-        const contractAddress = "0x6c0FC0B7cB2D4A5ae18eDcB9d8b46443A09Cad7A"
+        const contractAddress = "0xF50D5C84FAb512778fe7A1514c9ec491BDB1AfCA"
         const contractInstance = new ethers.Contract(contractAddress,contractAbi,signer);
         return {contractInstance,selectedAccount}
     } catch (error) {

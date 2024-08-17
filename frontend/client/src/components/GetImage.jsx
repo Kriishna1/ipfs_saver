@@ -22,7 +22,7 @@ const GetImage = ({reload}) => {
               const ipfsHashes = await getImageHashes()
               const ipfsHashArray = Object.values(ipfsHashes)
         
-              const url=`http://localhost:3000/api/getImage?page=${currentPage}&limit=${imagePerPage}`
+              const url=`https://project-k-server.onrender.com/api/getImage?page=${currentPage}&limit=${imagePerPage}`
               const token = localStorage.getItem("token")
               const config={
                 headers:{
