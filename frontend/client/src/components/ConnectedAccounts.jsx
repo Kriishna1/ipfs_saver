@@ -1,6 +1,6 @@
 import { useWebContext } from "../contexts/useWebContext";
 
-const ConnectedAccount = () => {
+const ConnectedAccounts = () => {
     const {webState}=useWebContext()
     const {selectedAccount}=webState;
     return ( 
@@ -12,4 +12,4 @@ const ConnectedAccount = () => {
     );
 }
  
-export default ConnectedAccount;
+export default ConnectedAccounts;
