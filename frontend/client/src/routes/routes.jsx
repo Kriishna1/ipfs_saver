@@ -9,7 +9,16 @@ export const routes = createBrowserRouter([
         <div className=" w-screen h-full flex flex-col justify-center items-center ">
            <Navbar/>
            <Home/>
+           <Home/>
+           <Home/>
+           <Home/>
+           <Home/>
+           <Home/>
+           <Home/>
         </div>
+
+
+
     
 )}
 ])
